@@ -8,7 +8,7 @@ namespace RegularExpressionAssignment
         static void Main(string[] args)
         {
             string firstNamePattern = "[A-Z][a-z]{3,}";
-            string[] firstNameInputs = { "dipesh","Dipesh","Di","Dinesh" };
+            string[] firstNameInputs = { "dipesh","Dipesh","Di","Dinesh","Dhan" };
             Regex re = new Regex(firstNamePattern);
             foreach (string input in firstNameInputs)
             {
