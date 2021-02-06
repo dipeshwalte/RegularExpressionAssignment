@@ -5,18 +5,24 @@ namespace RegularExpressionAssignment
 {
     class Program
     {
-        static void Main(string[] args)
+        static void ValidatePatterns(string pattern, string[] inputs)
         {
-            string firstNamePattern = "[A-Z][a-z]{3,}";
-            string[] firstNameInputs = { "dipesh","Dipesh","Di","Dinesh","Dhan" };
-            Regex re = new Regex(firstNamePattern);
-            foreach (string input in firstNameInputs)
+            Regex re = new Regex(pattern);
+            foreach (string input in inputs)
             {
                 if (re.IsMatch(input))
                     Console.WriteLine($"{input} is Valid");
                 else
                     Console.WriteLine($"{input} is inValid");
             }
+        }
+        static void Main(string[] args)
+        {
+            string firstNamePattern = "[A-Z][a-z]{2,}";
+            string[] firstNameInputs = { "dipesh","Dipesh","Di","Dinesh","Dha" };
+            ValidatePatterns(firstNamePattern, firstNameInputs);
+
+
         }
     }
 }
