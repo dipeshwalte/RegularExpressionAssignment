@@ -35,6 +35,11 @@ namespace RegularExpressionAssignment
             string phonePattern = @"^[0-9]{2}\s[0-9]{10}$";
             string[] phoneInputs = { "91 9422421317", "54 942242131", "9422421315", "9 9422421317" };
             ValidatePatterns(phonePattern, phoneInputs);
+
+            string passwordPattern = @"^[0-9A-Za-z!@#\$%\^&\*\(\)\-\+]{8}$";
+            string[] passwordInputs = { "12345678", "asrwerds", "fdsaf", "fetsetv!" };
+            ValidatePatterns(passwordPattern, passwordInputs);
+
         }
     }
 }
