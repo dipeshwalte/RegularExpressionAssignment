@@ -7,6 +7,7 @@ namespace RegularExpressionAssignment
     {
         static void ValidatePatterns(string pattern, string[] inputs)
         {
+            Console.WriteLine("------------------------------------------");
             Regex re = new Regex(pattern);
             foreach (string input in inputs)
             {
@@ -15,6 +16,7 @@ namespace RegularExpressionAssignment
                 else
                     Console.WriteLine($"{input} is inValid");
             }
+            Console.WriteLine("-----------------------------------------");
         }
         static void Main(string[] args)
         {
@@ -22,7 +24,9 @@ namespace RegularExpressionAssignment
             string[] firstNameInputs = { "dipesh","Dipesh","Di","Dinesh","Dha" };
             ValidatePatterns(firstNamePattern, firstNameInputs);
 
-
+            string lastNamePattern = "[A-Z][a-z]{2,}";
+            string[] lastNameInputs = { "walte", "Walte", "Wa", "Zokhowizh", "Wha" };
+            ValidatePatterns(lastNamePattern, lastNameInputs);
         }
     }
 }
