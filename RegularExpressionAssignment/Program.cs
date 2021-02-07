@@ -40,6 +40,32 @@ namespace RegularExpressionAssignment
             string[] passwordInputs = { "1A!2345678", "1!!Asrwerds", "fdsaf", "fetsetv!" , "12345678A" };
             ValidatePatterns(passwordPattern, passwordInputs);
 
+            string emailPattern2 = @"^[0-9a-zA-Z]+[\-\.+]?[A-Za-z0-9]+@[0-9A-Za-z]+\.[a-zA-Z]{2,4}\.?([a-zA-Z]{2,4})?$";
+            string[] emailAllInputs = { "abc@yahoo.com",
+                                        "abc-100@yahoo.com",
+                                        "abc.100@yahoo.com",
+                                        "abc111@abc.com",
+                                        "abc-100@abc.net",
+                                        "abc.100@abc.com.au",
+                                        "abc@1.com",
+                                        "abc@gmail.com.com",
+                                        "abc+100@gmail.com",
+                                        "abc",
+                                        "abc@.com.my",
+                                        "abc123@gmail.a",
+                                        "abc123@.com",
+                                        "abc123@.com.com",
+                                        ".abc@abc.com",
+                                        "abc()*@gmail.com",
+                                        "abc@%*.com",
+                                        "abc..2002@gmail.com",
+                                        "abc.@gmail.com",
+                                        "abc@abc@gmail.com",
+                                        "abc@gmail.com.1a",
+                                        "abc@gmail.com.aa.au",
+                                           };
+            ValidatePatterns(emailPattern2, emailAllInputs);
+
 
         }
     }
