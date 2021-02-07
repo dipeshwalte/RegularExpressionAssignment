@@ -32,6 +32,9 @@ namespace RegularExpressionAssignment
             string[] emailInputs = { "abc.xyz@bl.co.in", "abc@bl.co", "abc@bl", "abc@bc.com"};
             ValidatePatterns(emailPattern, emailInputs);
 
+            string phonePattern = @"^[0-9]{2}\s[0-9]{10}$";
+            string[] phoneInputs = { "91 9422421317", "54 942242131", "9422421315", "9 9422421317" };
+            ValidatePatterns(phonePattern, phoneInputs);
         }
     }
 }
