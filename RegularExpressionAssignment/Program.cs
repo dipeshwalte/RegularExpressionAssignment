@@ -27,6 +27,11 @@ namespace RegularExpressionAssignment
             string lastNamePattern = "[A-Z][a-z]{2,}";
             string[] lastNameInputs = { "walte", "Walte", "Wa", "Zokhowizh", "Wha" };
             ValidatePatterns(lastNamePattern, lastNameInputs);
+
+            string emailPattern = @"^[0-9a-zA-Z]+[\-\.+]?[A-Za-z0-9]*@[0-9A-Za-z]+\.[a-zA-Z]{2,4}\.?([a-zA-Z]{2,4})?$";
+            string[] emailInputs = { "abc.xyz@bl.co.in", "abc@bl.co", "abc@bl", "abc@bc.com"};
+            ValidatePatterns(emailPattern, emailInputs);
+
         }
     }
 }
